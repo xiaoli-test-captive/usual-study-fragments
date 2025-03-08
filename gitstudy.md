@@ -26,3 +26,7 @@ OK，此时我们需要把所有提交修改到远程自己的github上，命令
 git push -u origin yourbranch
 ```
 现在我们就可以在github上发起pull request了，成功发送之后，原作者那边会收到pull requests请求消息！等待原作者的审核，如果审核通过，那么恭喜你，你的代码已经成功合并到原作者的仓库中了！
+
+### github项目原作者如何处理其他人的pull requests
+1. 首先，原作者需要在github上点击pull requests按钮，然后点击对应的pull requests请求，点击merge pull request按钮，然后点击confirm merge按钮，此时原作者的仓库中就会有其他人的代码了！
+2. 但是，原作者的仓库中可能还有其他人的pull requests请求，所以原作者需要继续点击pull requests按钮，然后点击对应的pull requests请求，点击merge pull request按钮，然后点击confirm merge按钮，此时原作者的仓库中就会有其他人的代码了！ 依次类推，直到所有pull requests请求都处理完毕！
