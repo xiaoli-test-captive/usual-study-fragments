@@ -30,3 +30,17 @@ git push -u origin yourbranch
 ### github项目原作者如何处理其他人的pull requests
 1. 首先，原作者需要在github上点击pull requests按钮，然后点击对应的pull requests请求，点击merge pull request按钮，然后点击confirm merge按钮，此时原作者的仓库中就会有其他人的代码了！
 2. 但是，原作者的仓库中可能还有其他人的pull requests请求，所以原作者需要继续点击pull requests按钮，然后点击对应的pull requests请求，点击merge pull request按钮，然后点击confirm merge按钮，此时原作者的仓库中就会有其他人的代码了！ 依次类推，直到所有pull requests请求都处理完毕！
+
+### 本地仓库如何提交github仓库
+
+1. 首先，有一条信息需要注意，目前不支持用户名字和密码的验证方式提交github了，所以要采用其它方式，这里我推荐用personal access token的方式提交github，具体操作如下：
+2. 首先，在github上点击settings按钮，然后点击personal access tokens按钮，然后点击generate new token按钮，然后在token description中填写一个描述，然后在expiration中选择一个过期时间，然后在scopes中选择repo，然后点击generate token按钮，此时会生成一个token，这个token就是我们需要的了，然后将这个token复制到本地的git config中，命令如下：
+3. 本地git config中添加token，命令如下：
+``` bash
+   git remote add origin https://yourname:yourtoken@github.com/yourname/yourproject.git # 其实就是原来的https地址加上用户名和token
+```
+4. 然后，将本地仓库的代码推送到github仓库中，命令如下：
+``` bash
+git push -u origin main
+```
+5. 然后，就可以在github上看到自己的代码了！
